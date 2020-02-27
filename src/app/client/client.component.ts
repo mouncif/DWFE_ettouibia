@@ -28,7 +28,7 @@ export class ClientComponent implements OnInit {
   }
 onSubmit(){
   this.client = this.service.form.value;
-    
+  console.log(this.client);
     if(this.service.form.value.id==null){
       console.log(this.client);
       this.add();

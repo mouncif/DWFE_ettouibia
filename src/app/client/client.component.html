@@ -1,15 +1,15 @@
-<h3>Formulaire d'inscription</h3>
+<h3>Formulaire </h3>
 <form [formGroup]="service.form" class="normal-form" (submit)=onSubmit()>
     <mat-grid-list cols="1" rowHeight="300px">
         <mat-grid-tile >
             <div class="controles-container">
                 <input type="hidden" formControlName="id">
                 <mat-form-field>
-                    <input formControlName="firstName" matInput placeholder="Nom d'utilisateur">
+                    <input formControlName="firstName" matInput placeholder="Nom">
                     <mat-error>Ce champ est obligatoire.</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input formControlName="lastName" matInput placeholder="Nom d'utilisateur">
+                    <input formControlName="lastName" matInput placeholder="Prenom">
                     <mat-error>Ce champ est obligatoire.</mat-error>
                 </mat-form-field>
                 <mat-form-field>
@@ -20,8 +20,7 @@
                     <input formControlName="mobile" matInput placeholder="Numero de telephone">
                 </mat-form-field>
                 <mat-form-field>
-                    <input formControlName="adresse" matInput placeholder="Nom d'utilisateur">
-                    <mat-error>Ce champ est obligatoire.</mat-error>
+                    <input formControlName="adresse" matInput placeholder="Adresse">
                 </mat-form-field>
                 <mat-form-field>
                     <input formControlName="city" matInput placeholder="Ville">

@@ -1,3 +1,15 @@
 {
-    "clients":[]
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "Ettouibiaaa",
+      "lastName": "Salma",
+      "email": "ettoui.salma@gmail.com",
+      "mobile": "07000000",
+      "city": "Agadir",
+      "adresse": "Agdair",
+      "image": "",
+      "isPermanent": false
+    }
+  ]
 }

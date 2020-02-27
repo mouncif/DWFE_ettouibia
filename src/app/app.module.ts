@@ -14,6 +14,7 @@ import { MaterialModule } from './material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
+import { ClientListComponent } from './client-list/client-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserService } from './services/user.service';
     ClientComponent,
     FooterComponent,
     ProduitsComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,

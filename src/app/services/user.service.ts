@@ -29,7 +29,7 @@ private url=" http://localhost:3000/clients";
       lastName:'',
       mobile:'',
       city:'',
-      addresse:'',
+      adresse:'',
       image:'',
       isPermanent:false
     })
@@ -48,7 +48,7 @@ private url=" http://localhost:3000/clients";
   }
   setter(row){
     this.form.setValue(row);
-    this.route.navigate(['/addClient']);
+    this.route.navigate(['/users']);
   }
   delete(id){
     return this.http.delete(`${this.url}/${id}`);
