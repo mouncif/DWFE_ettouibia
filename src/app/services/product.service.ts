@@ -1,20 +1,24 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Produit } from '../produit';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  private url=" http://localhost:3000/produits";
   form: FormGroup = new FormGroup({
     id: new FormControl(null),
     Name: new FormControl('', Validators.required),
     CName: new FormControl('', Validators.required),
-    prixbase: new FormControl('', Validators.email),
-    mobile: new FormControl('', Validators.minLength[(8)]),
-    city: new FormControl(''),
-    adresse:new FormControl(''),
+    prixbase: new FormControl(''),
+    prixvente: new FormControl(''),
+    seuil: new FormControl(''),
+    unité:new FormControl(''),
     image:new FormControl(''),
-    isPermanent: new FormControl(false)
+    quantiteinitiale: new FormControl(''),
+    quantiteactuel: new FormControl(''),
   });
   initializeFormGroup(){
     this.form.setValue({
@@ -22,24 +26,24 @@ export class ProductService {
       Name:'',
       prixbase:'',
       CName:'',
-      mobile:'',
-      city:'',
-      adresse:'',
+      prixvente:'',
+      seuil:'',
+      unité:'',
       image:'',
-      isPermanent:false
+      quantiteinitiale:'',
+      quantiteactuel:''
     })
   }
 
-  id?:number;
-    Name:string;
-    CName:string;
-    prixbase:string;
-    prixvente:string;
-    seuil:string;
-    image:string;
-    unité:string;
-    quantiteinitiale:string;
-    quantiteactuel:string;
-}
-  constructor() { }
+  AjouterProduit(produit){
+    return this.http.post<Produit>(this.url, produit);
+  }
+  getAllProducts(){
+    return this.http.get<Produit[]>(this.url);
+  }
+  delete(id){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
+  constructor(private http:HttpClient) { }
 }

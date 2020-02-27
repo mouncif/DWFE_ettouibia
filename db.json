@@ -11,5 +11,19 @@
       "image": "",
       "isPermanent": false
     }
+  ],
+  "produits": [
+    {
+      "id": 1,
+      "Name": "produit1",
+      "CName": "pr1",
+      "prixbase": "2300",
+      "prixvente": "100",
+      "seuil": "10",
+      "unité": "5",
+      "image": "",
+      "quantiteinitiale": "5",
+      "quantiteactuel": "2"
+    }
   ]
 }

@@ -16,7 +16,7 @@ export class ProduitsComponent implements OnInit {
     prixvente: '',
     seuil: '',
     image:'',
-    unité:'',
+    unite:'',
     quantiteinitiale: '',
     quantiteactuel:''
   };
@@ -34,7 +34,7 @@ export class ProduitsComponent implements OnInit {
         this.service.form.reset();
       }
       else{
-        this.service.update(this.produit).subscribe(()=>this.route.navigate(['/produitsList']));
+        //this.service.update(this.produit).subscribe(()=>this.route.navigate(['/produitsList']));
       }
       this.service.initializeFormGroup();
   }

@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { ClientListComponent } from './client-list/client-list.component';
+import { ProduitsListComponent } from './produits-list/produits-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ClientListComponent } from './client-list/client-list.component';
     FooterComponent,
     ProduitsComponent,
     AcceuilComponent,
-    ClientListComponent
+    ClientListComponent,
+    ProduitsListComponent
   ],
   imports: [
     BrowserModule,

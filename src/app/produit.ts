@@ -6,7 +6,7 @@ export interface Produit {
     prixvente:string;
     seuil:string;
     image:string;
-    unité:string;
+    unite:string;
     quantiteinitiale:string;
     quantiteactuel:string;
 }
