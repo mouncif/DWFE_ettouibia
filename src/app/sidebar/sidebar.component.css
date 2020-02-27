@@ -1,0 +1,15 @@
+.sidebar{
+    background-color: #343232;
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: stretch;
+    
+
+}
+.nav-item{
+    border: none;
+}
+span{
+    color: aliceblue;
+}
