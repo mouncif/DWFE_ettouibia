@@ -4,12 +4,24 @@
     width: 20%;
     height: 100%;
     align-items: stretch;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
     
 
 }
-.nav-item{
+a{
     border: none;
+    text-decoration: none;
 }
 span{
     color: aliceblue;
+}
+.nav-item{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+li{
+    list-style-type: none;
 }
