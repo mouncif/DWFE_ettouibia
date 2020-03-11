@@ -1,0 +1,67 @@
+<div class="produits-container">
+    <section fxLayout="row wrap" fxLayoutAlign="center center">
+        <mat-card fxFlex="700px" fxFlex.xs="100%">
+    <mat-card-title>Formulaire d' ajout des utilisateurs</mat-card-title>
+    <form [formGroup]="service.form" class="normal-form" (submit)=onSubmit()>
+        <mat-card-content>
+            <input type="hidden" formControlName="id">
+            
+            <img mat-card-image src="https://birkeland.uib.no/wp-content/themes/bcss/images/no.png">
+            <p>
+                <mat-form-field floatPlaceholder="never" id="field1" appearance="outline">
+                    Url de l'image<input matInput  formControlName="imageUrl" >
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+            </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Profil de utilisateur</mat-label>
+                        <mat-select formControlName="profil" placeholder="Profile du utilisateur">
+                            <mat-option value="User">
+                                User
+                            </mat-option>
+
+                            <mat-option value="Editor">
+                                Editor
+                            </mat-option>
+
+                            <mat-option value="admin">
+                                admin
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        Email<input formControlName="email" matInput >
+                        <mat-icon matSuffix>mail_outline</mat-icon>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        Date de creation<input formControlName="datecreation" matInput [matDatepicker]="pickerDateC"
+                            >
+                        <mat-datepicker-toggle matSuffix [for]="pickerDateC"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerDateC></mat-datepicker>
+                    </mat-form-field>
+                </p>
+
+                <mat-form-field appearance="outline">
+                    Date de fin<input formControlName="datefin" matInput [matDatepicker]="pickerDateF"
+                        >
+                    <mat-datepicker-toggle matSuffix [for]="pickerDateF"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerDateF></mat-datepicker>
+                </mat-form-field>
+                    
+                    
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="button-row">
+                <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+            </div>
+        </mat-card-actions>
+    </form>
+    </mat-card>
+    </section>
+    </div>

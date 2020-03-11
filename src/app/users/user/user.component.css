@@ -10,12 +10,10 @@ mat-card-title{
     margin-left: 160px;
 }
 mat-form-field{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 75px;
     text-align: left;
-}
-#field1{
-    padding-right: 10px;
 }
 form{
   width: 90%;
@@ -29,4 +27,9 @@ section{
     padding-bottom: 40px;
     width: 90%;
     height: 100%;
+}
+img{
+    width: 440px;
+    height: 300px;
+    margin-right: 190px;
 }

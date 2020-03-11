@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../services/client.service';
+import { UserService } from '../services/user.service';
 import { MatTableDataSource } from '@angular/material';
-import { Client } from '../client';
+import { User } from '../user';
 
 @Component({
-  selector: 'app-client-list',
-  templateUrl: './client-list.component.html',
-  styleUrls: ['./client-list.component.css']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class ClientListComponent implements OnInit {
-
-  datasource = new MatTableDataSource<Client>();
-  displayColumns: string[]=['id', 'firstName', 'lastName', 'mobile', 'email', 'city','statut', 'actions'];
-  constructor(private service:ClientService) { }
+export class UsersComponent implements OnInit {
+  datasource = new MatTableDataSource<User>();
+  displayColumns: string[]=['id', 'profil', 'email', 'datecreation', 'datefin', 'actions'];
+  constructor(private service:UserService) { }
   findAll(){
     this.service.getAll().subscribe(res => {
       if (!res) { return; }

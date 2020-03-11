@@ -13,9 +13,13 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { MaterialModule } from './material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from './services/user.service';
+import { ClientService } from './services/client.service';
 import { ClientListComponent } from './client-list/client-list.component';
 import { ProduitsListComponent } from './produits-list/produits-list.component';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component';
+import { FournisseursComponent } from './fournisseurs/fournisseurs.component';
+import { FournisseurComponent } from './fournisseurs/fournisseur/fournisseur.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { ProduitsListComponent } from './produits-list/produits-list.component';
     ProduitsComponent,
     AcceuilComponent,
     ClientListComponent,
-    ProduitsListComponent
+    ProduitsListComponent,
+    UsersComponent,
+    UserComponent,
+    FournisseursComponent,
+    FournisseurComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,7 @@ import { ProduitsListComponent } from './produits-list/produits-list.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

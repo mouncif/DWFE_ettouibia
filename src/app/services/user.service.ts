@@ -1,50 +1,45 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Client } from '../client';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { User } from '../user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-private url=" http://localhost:3000/clients";
-  constructor( private http:HttpClient, private route:Router) { }
+  private url=" http://localhost:3000/users";
+  constructor(private http:HttpClient, private route:Router) { }
   form: FormGroup = new FormGroup({
     id: new FormControl(null),
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
+    profil: new FormControl(''),
     email: new FormControl('', Validators.email),
-    mobile: new FormControl('', Validators.minLength[(8)]),
-    city: new FormControl(''),
-    adresse:new FormControl(''),
-    image:new FormControl(''),
-    isPermanent: new FormControl(false)
+    datecreation: new FormControl(''),
+    datefin: new FormControl(''),
+    imageUrl:new FormControl('')
   });
+
   initializeFormGroup(){
     this.form.setValue({
       id:null,
-      firstName:'',
-      email:'',
-      lastName:'',
-      mobile:'',
-      city:'',
-      adresse:'',
-      image:'',
-      isPermanent:false
+      profil:'',
+      email: '',
+      datecreation: new Date(),
+      datefin: new Date(),
+      imageUrl:''
     })
   }
-  AjouterClient(client){
-    return this.http.post<Client>(this.url, client);
+  AjouterUser(user){
+    return this.http.post<User>(this.url, user);
   }
   goList(){
-    return this.route.navigate(['/ClientList']);
+    return this.route.navigate(['/userList']);
   }
   getAll(){
-    return this.http.get<Client[]>(this.url);
+    return this.http.get<User[]>(this.url);
   }
   update(row){
-    return this.http.put<Client>(`${this.url}/${row.id}`, row);
+    return this.http.put<User>(`${this.url}/${row.id}`, row);
   }
   setter(row){
     this.form.setValue(row);

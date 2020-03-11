@@ -2,14 +2,14 @@
   "clients": [
     {
       "id": 1,
-      "firstName": "Ettouibiaaa",
+      "firstName": "Ettouibia",
       "lastName": "Salma",
       "email": "ettoui.salma@gmail.com",
-      "mobile": "07000000",
+      "mobile": "070000011",
+      "statut": "cliente",
       "city": "Agadir",
-      "adresse": "Agdair",
-      "image": "",
-      "isPermanent": false
+      "adresse": "Agadir",
+      "image": "https://i.pinimg.com/600x315/97/18/12/97181216a989c76a0475760c3f8a63e4.jpg"
     }
   ],
   "produits": [
@@ -25,5 +25,16 @@
       "quantiteinitiale": "5",
       "quantiteactuel": "2"
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": 1,
+      "profil": "admin",
+      "email": "admin01@gmail.com",
+      "datecreation": "2020-03-10T23:00:00.000Z",
+      "datefin": "2020-03-26T23:00:00.000Z",
+      "imageUrl": "https://birkeland.uib.no/wp-content/themes/bcss/images/no.png"
+    }
+  ],
+  "fournisseurs": []
 }

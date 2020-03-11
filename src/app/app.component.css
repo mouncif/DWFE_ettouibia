@@ -1,4 +1,68 @@
-.content-wrapper{
-    margin-top: auto;
-    margin-left: 100px;
+mat-sidenav{
+    background-color:#343232;
+}
+.mat-list-base .mat-list-item{
+    color: white;
+    padding-bottom: 10px;
+}
+mat-nav-list{
+    padding-top: 15px;
+}
+mat-icon{
+    padding-right: 15px;
+}
+.sidenav-item {
+    position: relative;
+    border-bottom: 1px solid #dfdfdf;
+    transition: background-color 0.1s linear, color 0.1s linear, font-weight 0.1s linear;
+    overflow-x: hidden;
+}
+.sidenav-item:focus {
+    background: inherit;
+}
+.sidenav-item:hover .item-selector {
+    transform: translateX(-5px);
+}
+.sidenav-item.selected {
+    font-weight: 500;
+}
+.sidenav-item.selected .item-selector {
+    transform: translateX(-5px);
+}
+.sidenav-item.selected:hover {
+    background-color: inherit;
+}
+.sidenav-item .item-selector {
+    transition: transform 0.1s linear;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: -100%;
+}
+mat-expansion-panel {
+    border-bottom: 1px solid #dfdfdf;
+    border-radius: 0;
+}
+mat-expansion-panel:focus {
+    background: transparent;
+}
+mat-expansion-panel.mat-expanded mat-expansion-panel-header .mat-expansion-panel-header-title {
+    font-weight: 500;
+}
+mat-expansion-panel.mat-expanded .sidenav-item {
+    border-color: transparent;
+    font-size: 15px;
+    height: 45px;
+}
+mat-expansion-panel mat-expansion-panel-header {
+    padding-left: 16px;
+}
+mat-expansion-panel mat-expansion-panel-header .group-title {
+    font-size: 16px;
+}
+mat-expansion-panel mat-expansion-panel-header .mat-expansion-indicator::after {
+    color: inherit;
+}
+mat-sidenav-container{
+    height: 545px;
 }

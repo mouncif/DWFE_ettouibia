@@ -1,11 +1,18 @@
-<div class="container-scroller">
-  <app-navbar></app-navbar>
-  <div class="page-body">
-    <app-sidebar></app-sidebar>
-    <div class="main-panel">
-      <div class="content-wrapper">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
-</div>
+<app-navbar></app-navbar>
+
+
+
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav #drawer fi mode="side" opened role="navigation" flex="none">
+    <mat-nav-list>
+      <a mat-list-item routerLink='/acceuil'><mat-icon>home</mat-icon> Acceuil </a>
+      <a mat-list-item routerLink='/users'><mat-icon>person_outline</mat-icon>Gestion des utilisateurs</a>
+      <a mat-list-item routerLink='/clients'><mat-icon>person_outline</mat-icon>Gestion des clients</a>
+      <a mat-list-item routerLink='/fournisseurs'><mat-icon>person_outline</mat-icon>Gestion des fournisseurs</a>
+      <a mat-list-item routerLink='/produits'><mat-icon>local_grocery_store</mat-icon>Gestion des produits</a>
+    </mat-nav-list>
+</mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

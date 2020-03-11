@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../client';
-import { UserService } from '../services/user.service';
+import { ClientService } from '../services/client.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,16 +12,16 @@ export class ClientComponent implements OnInit {
   private client: Client = {
     firstName: '',
     lastName:'',
+    statut:'',
     email: '',
     mobile: '',
     city: '',
     adresse:'',
-    image:'',
-    isPermanent: false
+    image:''
   };
   clients: Client[]=[];
   
-  constructor(private service:UserService, private route:Router) { }
+  constructor(private service:ClientService, private route:Router) { }
   
 
   ngOnInit() {
