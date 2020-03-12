@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Produit } from '../produit';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,13 @@ export class ProductService {
   delete(id){
     return this.http.delete(`${this.url}/${id}`);
   }
+  update(row){
+    return this.http.put<Produit>(`${this.url}/${row.id}`, row);
+  }
+  setter(row){
+    this.form.setValue(row);
+    this.route.navigate(['/produits']);
+  }
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient , private route:Router) { }
 }

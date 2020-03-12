@@ -1,0 +1,45 @@
+.controles-container > *{
+    width: 100%;
+    margin-left: 100px;
+}
+mat-card-title{
+    text-align: left;
+    font-weight: 700;
+    color: dimgrey;
+    font-size: 200;
+    margin-left: 160px;
+}
+mat-form-field{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+    text-align: left;
+    width: 90%;
+}
+#field1{
+    padding-right: 10px;
+}
+form{
+  width: 90%;
+  padding-top: 40px;
+  margin-left: 105px;
+
+}
+section{
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    width: 90%;
+    height: 100%;
+}
+nav{
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-top: -10px;
+    height: 100px;
+}

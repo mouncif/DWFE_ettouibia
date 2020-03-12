@@ -1,0 +1,34 @@
+.fournisseur-list{
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    width: 90%;
+    height: 100%;
+}
+mat-card-title{
+    text-align: center;
+    font-weight: 700;
+    color: dimgrey;
+    font-size: 200;
+    margin-bottom: 40px;
+}
+table{
+  width: 90%;
+  margin-top: 0px;
+  margin-left: 25px;
+
+}
+#add{
+  margin-left: 625px;
+}
+nav{
+  color: white;
+  text-align: left;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 200;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-top: -10px;
+  height: 100px;
+}

@@ -1,1 +1,69 @@
-<p>fournisseur works!</p>
+<nav aria-label="breadcrumb" style="background-color: #752E4A;">
+    <h1 class="display-5 px-5 pb-3 text-white">Gestion des fournisseurs</h1>
+</nav>
+<div class="produits-container">
+    <section fxLayout="row wrap" fxLayoutAlign="center center">
+        <mat-card fxFlex="700px" fxFlex.xs="100%">
+    <mat-card-title>Formulaire d' ajout des fournisseurs</mat-card-title>
+    <form [formGroup]="service.form" class="normal-form" (submit)=onSubmit()>
+        <mat-card-content>
+            <input type="hidden" formControlName="id">
+                <p>
+                    <mat-form-field floatPlaceholder="never" id="field1" appearance="outline">
+                        Nom fournisseur<input matInput  formControlName="fullName" >
+                        <mat-icon matSuffix>person_outline</mat-icon>
+                    </mat-form-field>
+    
+                    <mat-form-field  appearance="outline">
+                        Nom court du fournisseur<input formControlName="courtName" matInput >
+                        <mat-icon matSuffix>person_outline</mat-icon>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" >
+                        Tel fix<input formControlName="fix" matInput>
+                        <span matPrefix>+120 &nbsp;</span>
+                            <mat-icon matSuffix>phone</mat-icon>
+                    </mat-form-field>
+                    
+                        <mat-form-field appearance="outline">
+                            Numero de telephone<input formControlName="mobile" matInput >
+                            <span matPrefix>+120 &nbsp;</span>
+                            <mat-icon matSuffix>phone</mat-icon>
+                        </mat-form-field>
+                    
+                </p>
+                <p><mat-form-field appearance="outline" >
+                    Fax du fournisseur<input formControlName="fax" matInput>
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        Email<input formControlName="email" matInput >
+                        <mat-icon matSuffix>mail_outline</mat-icon>
+                    </mat-form-field>
+                </p>
+               
+                <p>
+                    <mat-form-field appearance="outline">
+                        Adresse<input formControlName="adresse" matInput>
+                        <mat-icon matSuffix>home</mat-icon>
+                    </mat-form-field>
+                </p>
+                    <mat-form-field appearance="outline">
+                       Ville <input formControlName="city" matInput >
+                       <mat-icon matSuffix>home</mat-icon>
+                    </mat-form-field>
+                    
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="button-row">
+                <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+            </div>
+        </mat-card-actions>
+    </form>
+    </mat-card>
+    </section>
+    </div>

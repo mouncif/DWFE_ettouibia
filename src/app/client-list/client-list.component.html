@@ -1,3 +1,6 @@
+<nav aria-label="breadcrumb" style="background-color: #752E4A;">
+    <h1 class="display-5 px-5 pb-3 text-white">Gestion des clients</h1>
+</nav>
 <div class="client-list">
     <mat-card fxFlex="700px" fxFlex.xs="100%">
         <mat-card-title>Liste des clients</mat-card-title>
@@ -62,5 +65,6 @@
         <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
     </table>
 </mat-card-content>
+<button mat-icon-button (click)="goAdd()" color="primary" id="add"><mat-icon>add</mat-icon>Ajouter un client</button>
 </mat-card>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../services/client.service';
 import { MatTableDataSource } from '@angular/material';
 import { Client } from '../client';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-list',
@@ -12,7 +13,7 @@ export class ClientListComponent implements OnInit {
 
   datasource = new MatTableDataSource<Client>();
   displayColumns: string[]=['id', 'firstName', 'lastName', 'mobile', 'email', 'city','statut', 'actions'];
-  constructor(private service:ClientService) { }
+  constructor(private service:ClientService, private route:Router) { }
   findAll(){
     this.service.getAll().subscribe(res => {
       if (!res) { return; }
@@ -33,6 +34,9 @@ export class ClientListComponent implements OnInit {
     this.service.delete(id).subscribe(()=>{
       this.findAll();
     });
+  }
+  goAdd(){
+    this.route.navigate(['/clients']);
   }
 
 }

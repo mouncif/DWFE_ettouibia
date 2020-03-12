@@ -6,13 +6,14 @@
   <mat-sidenav #drawer fi mode="side" opened role="navigation" flex="none">
     <mat-nav-list>
       <a mat-list-item routerLink='/acceuil'><mat-icon>home</mat-icon> Acceuil </a>
-      <a mat-list-item routerLink='/users'><mat-icon>person_outline</mat-icon>Gestion des utilisateurs</a>
-      <a mat-list-item routerLink='/clients'><mat-icon>person_outline</mat-icon>Gestion des clients</a>
-      <a mat-list-item routerLink='/fournisseurs'><mat-icon>person_outline</mat-icon>Gestion des fournisseurs</a>
-      <a mat-list-item routerLink='/produits'><mat-icon>local_grocery_store</mat-icon>Gestion des produits</a>
+      <a mat-list-item routerLink='/userList'><mat-icon>supervisor_account</mat-icon>Gestion des utilisateurs</a>
+      <a mat-list-item routerLink='/clientList'><mat-icon>account_circle</mat-icon>Gestion des clients</a>
+      <a mat-list-item routerLink='/fournisseurList'><mat-icon>work</mat-icon>Gestion des fournisseurs</a>
+      <a mat-list-item routerLink='/produitsList'><mat-icon>local_grocery_store</mat-icon>Gestion des produits</a>
     </mat-nav-list>
 </mat-sidenav>
   <mat-sidenav-content>
+        
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

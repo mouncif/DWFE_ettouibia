@@ -12,14 +12,26 @@ mat-card-title{
 mat-form-field{
     margin-top: 1px;
     margin-bottom: 1px;
-    margin-left: 75px;
+    margin-left: 0px;
     text-align: left;
+    width: 70%;
 }
 form{
   width: 90%;
   padding-top: 40px;
   margin-left: 165px;
 
+}
+nav{
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-top: -10px;
+    height: 100px;
 }
 section{
     padding-top: 40px;

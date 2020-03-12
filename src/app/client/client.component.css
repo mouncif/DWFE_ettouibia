@@ -5,6 +5,7 @@
 mat-card-title{
     text-align: left;
     font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: dimgrey;
     font-size: 200;
     margin-left: 160px;
@@ -13,9 +14,21 @@ mat-form-field{
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: left;
+    width: 70%;
 }
 #field1{
     padding-right: 10px;
+}
+nav{
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-top: -10px;
+    height: 100px;
 }
 form{
   width: 90%;

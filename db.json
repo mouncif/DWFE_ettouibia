@@ -14,16 +14,16 @@
   ],
   "produits": [
     {
-      "id": 1,
-      "Name": "produit1",
+      "id": 2,
+      "Name": "produit11",
       "CName": "pr1",
-      "prixbase": "2300",
-      "prixvente": "100",
-      "seuil": "10",
-      "unité": "5",
+      "prixbase": "1000",
+      "prixvente": "1200",
+      "seuil": "2%",
+      "unité": "kilo",
       "image": "",
-      "quantiteinitiale": "5",
-      "quantiteactuel": "2"
+      "quantiteinitiale": "12",
+      "quantiteactuel": "7"
     }
   ],
   "users": [
@@ -36,5 +36,17 @@
       "imageUrl": "https://birkeland.uib.no/wp-content/themes/bcss/images/no.png"
     }
   ],
-  "fournisseurs": []
+  "fournisseurs": [
+    {
+      "id": 1,
+      "fullName": "Fournisseur11",
+      "courtName": "f1",
+      "email": "fournisseur1@gmail.com",
+      "mobile": "646899064",
+      "fix": "52867678",
+      "city": "beni mellal",
+      "adresse": "Beni mellal",
+      "fax": "test"
+    }
+  ]
 }

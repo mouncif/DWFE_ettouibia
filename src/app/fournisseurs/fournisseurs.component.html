@@ -1,1 +1,67 @@
-<p>fournisseurs works!</p>
+<nav aria-label="breadcrumb" style="background-color: #752E4A;">
+    <h1 class="display-5 px-5 pb-3 text-white">Gestion des fournisseurs</h1>
+</nav>
+<div class="fournisseur-list">
+    <mat-card fxFlex="700px" fxFlex.xs="100%">
+        <mat-card-title>Liste des fournisseurs</mat-card-title>
+        <mat-card-content>
+    
+    
+    <table mat-table [dataSource]="datasource" matSort class="mat-elevation-z8">
+    
+        <!-- id Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Id. </th>
+            <td mat-cell *matCellDef="let fournisseur"> {{fournisseur.id}} </td>
+        </ng-container>
+    
+        <!-- fullname Column -->
+        <ng-container matColumnDef="fullName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+            <td mat-cell *matCellDef="let fournisseur"> {{fournisseur.fullName}} </td>
+        </ng-container>
+    
+        <!-- email Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+            <td mat-cell *matCellDef="let fournisseur"> {{fournisseur.email}} </td>
+        </ng-container>
+    
+        <!-- mobile Column -->
+        <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile </th>
+            <td mat-cell *matCellDef="let fournisseur"> {{fournisseur.mobile}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fix">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fix du fournisseur </th>
+            <td mat-cell *matCellDef="let fournisseur"> {{fournisseur.fix}} </td>
+        </ng-container>
+
+        <!-- city Column -->
+        <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+            <td mat-cell *matCellDef="let fournisseur"> {{fournisseur.city}} </td>
+        </ng-container>
+    
+        <!-- gender Column -->
+        
+    <!-- ispermanent Column -->
+        
+    
+        <!--Buttons-->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+            <button mat-icon-button (click)="onDelete(row.id)" color="warn"><mat-icon>delete_outline</mat-icon></button>
+          </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    </table>
+</mat-card-content>
+<button mat-icon-button (click)="goAdd()" color="primary" id="add"><mat-icon>add</mat-icon>Ajouter un fournisseur</button>
+</mat-card>
+</div>

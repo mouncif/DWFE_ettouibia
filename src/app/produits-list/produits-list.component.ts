@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { Produit } from '../produit';
 import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-produits-list',
@@ -11,7 +12,7 @@ import { ProductService } from '../services/product.service';
 export class ProduitsListComponent implements OnInit {
   datasource = new MatTableDataSource<Produit>();
   displayColumns: string[]=['id', 'Name', 'prixbase', 'seuil', 'quantiteactuel', 'unite', 'actions'];
-  constructor(private service:ProductService) { }
+  constructor(private service:ProductService, private route:Router) { }
 
   ngOnInit() {
     this.findAll();
@@ -31,5 +32,10 @@ export class ProduitsListComponent implements OnInit {
       this.findAll();
     });
   }
-
+  onEdit(row){
+    this.service.setter(row);
+  }
+  goAdd(){
+    this.route.navigate(['/produits']);
+  }
 }

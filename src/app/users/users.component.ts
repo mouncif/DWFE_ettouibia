@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { MatTableDataSource } from '@angular/material';
 import { User } from '../user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -11,7 +12,7 @@ import { User } from '../user';
 export class UsersComponent implements OnInit {
   datasource = new MatTableDataSource<User>();
   displayColumns: string[]=['id', 'profil', 'email', 'datecreation', 'datefin', 'actions'];
-  constructor(private service:UserService) { }
+  constructor(private service:UserService, private route:Router) { }
   findAll(){
     this.service.getAll().subscribe(res => {
       if (!res) { return; }
@@ -33,5 +34,7 @@ export class UsersComponent implements OnInit {
       this.findAll();
     });
   }
-
+  goAdd(){
+    this.route.navigate(['/users']);
+  }
 }

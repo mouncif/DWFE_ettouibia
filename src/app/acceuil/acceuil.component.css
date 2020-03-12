@@ -1,3 +1,35 @@
-h3{
-    text-align: center;
+nav{
+  color: white;
+  text-align: left;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 200;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-top: -10px;
+  height: 100px;
 }
+body{
+    margin-top:20px;
+    background-color: violet;
+  }
+
+  mat-card-title{
+    display: inline-flex;
+  }
+  mat-icon{
+    padding-top: 10px;
+    font-size: 30px;
+    color: darkmagenta;
+  }
+  mat-card{
+    background-color: gainsboro;
+  }
+  .mat-icon-button .mat-icon, .mat-icon-button i {
+    line-height: 50px;
+}
+  h3{
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 0px;
+  }

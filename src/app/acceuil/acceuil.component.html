@@ -1,2 +1,84 @@
-<h3>acceuil</h3>
-<div></div>
+<nav aria-label="breadcrumb" style="background-color: #752E4A;">
+    <h1 class="display-5 px-5 pb-3 text-white">Acceuil</h1>
+</nav>
+<div class="grid-container">
+    <mat-grid-list cols="2" rowHeight="240px">
+        <mat-grid-tile>
+            <mat-card class="dashbord-card">
+                <mat-card-header>
+                    <mat-card-title>
+                       <h3> Liste des produits</h3>
+                   
+                    <button mat-icon-button class="more-button">
+                        <mat-icon>shopping_cart</mat-icon>
+                    </button>
+                </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashbord-card-content">
+                    <div>
+                        <a routerLink="/produitsList" style="text-decoration: none; color: gray;">Voir les détails</a>
+                        
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card class="dashbord-card">
+                <mat-card-header>
+                    <mat-card-title>
+                       <h3> Liste des utilisateurs</h3>
+                   
+                    <button mat-icon-button class="more-button">
+                        <mat-icon>supervisor_account</mat-icon>
+                    </button>
+                </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashbord-card-content">
+                    <div>
+                        <a routerLink="/userList" style="text-decoration: none; color: gray;">Voir les détails</a>
+                        
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card class="dashbord-card">
+                <mat-card-header>
+                    <mat-card-title>
+                       <h3> Liste des clients</h3>
+                   
+                    <button mat-icon-button class="more-button">
+                        <mat-icon>account_circle</mat-icon>
+                    </button>
+                </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashbord-card-content">
+                    <div>
+                        <a routerLink="/clientList" style="text-decoration: none; color: gray;">Voir les détails</a>
+                        
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card class="dashbord-card">
+                <mat-card-header>
+                    <mat-card-title>
+                       <h3> Liste des fournisseurs</h3>
+                   
+                    <button mat-icon-button class="more-button">
+                        <mat-icon>work</mat-icon>
+                    </button>
+                </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashbord-card-content">
+                    <div>
+                        <a routerLink="/fournisseurList" style="text-decoration: none; color: gray;">Voir les détails</a>
+                        
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
