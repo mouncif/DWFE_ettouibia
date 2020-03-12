@@ -6,7 +6,7 @@
         <mat-card-title>Liste des produits</mat-card-title>
         <mat-card-content>
     
-    
+            <button mat-icon-button (click)="goAdd()" color="primary" id="add"><mat-icon>add</mat-icon>Ajouter un produit</button>
     <table mat-table [dataSource]="datasource" matSort class="mat-elevation-z8">
     
         <!-- id Column -->
@@ -58,6 +58,5 @@
         <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
     </table>
 </mat-card-content>
-<button mat-icon-button (click)="goAdd()" color="primary" id="add"><mat-icon>add</mat-icon>Ajouter un produit</button>
 </mat-card>
 </div>
