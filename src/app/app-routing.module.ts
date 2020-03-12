@@ -12,6 +12,7 @@ import{ProduitsListComponent} from './produits-list/produits-list.component'
 
 
 const routes: Routes = [
+  {path : '', redirectTo: '/acceuil', pathMatch: 'full'},
   {path:'clients', component:ClientComponent},
   {path:'acceuil', component:AcceuilComponent},
   {path:'users', component:UserComponent},
