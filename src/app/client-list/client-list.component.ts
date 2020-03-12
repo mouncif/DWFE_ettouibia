@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class ClientListComponent implements OnInit {
 
   datasource = new MatTableDataSource<Client>();
-  displayColumns: string[]=['id', 'firstName', 'lastName', 'mobile', 'email', 'city','statut', 'actions'];
+  displayColumns: string[]=['id', 'firstName', 'lastName','statut', 'email', 'mobile', 'city', 'adresse', 'actions'];
   constructor(private service:ClientService, private route:Router) { }
   findAll(){
     this.service.getAll().subscribe(res => {

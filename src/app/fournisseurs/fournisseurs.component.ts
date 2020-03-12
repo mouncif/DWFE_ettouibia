@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class FournisseursComponent implements OnInit {
   datasource = new MatTableDataSource<Fournisseur>();
-  displayColumns: string[]=['id', 'fullName', 'mobile', 'email','fix', 'city', 'actions'];
+  displayColumns: string[]=['id', 'fullName','courtName',  'email', 'mobile','fix', 'city','adresse', 'actions'];
   constructor(private service:FournisseurService, private route:Router) { }
   findAll(){
     this.service.getAll().subscribe(res => {

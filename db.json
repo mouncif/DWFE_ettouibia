@@ -20,7 +20,7 @@
       "prixbase": "1000",
       "prixvente": "1200",
       "seuil": "2%",
-      "unité": "kilo",
+      "unite": "kilo",
       "image": "",
       "quantiteinitiale": "12",
       "quantiteactuel": "7"

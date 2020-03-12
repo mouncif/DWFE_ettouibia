@@ -12,11 +12,17 @@ mat-card-title{
     font-size: 200;
     margin-bottom: 40px;
 }
+th.mat-header-cell{
+  padding-right: 45px;
+}
+td.mat-cell{
+  text-align: left;
+  padding-right: 10px;
+}
 table{
-  width: 90%;
+  width: 96%;
   margin-top: 0px;
-  margin-left: 25px;
-
+  margin-left: 15px;
 }
 #add{
   margin-bottom: 15px;

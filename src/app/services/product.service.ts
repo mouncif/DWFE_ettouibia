@@ -16,8 +16,8 @@ export class ProductService {
     prixbase: new FormControl(''),
     prixvente: new FormControl(''),
     seuil: new FormControl(''),
-    unité:new FormControl(''),
     image:new FormControl(''),
+    unite:new FormControl(''),
     quantiteinitiale: new FormControl(''),
     quantiteactuel: new FormControl(''),
   });
@@ -29,8 +29,8 @@ export class ProductService {
       CName:'',
       prixvente:'',
       seuil:'',
-      unité:'',
       image:'',
+      unite:'',
       quantiteinitiale:'',
       quantiteactuel:''
     })

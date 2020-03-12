@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProduitsListComponent implements OnInit {
   datasource = new MatTableDataSource<Produit>();
-  displayColumns: string[]=['id', 'Name', 'prixbase', 'seuil', 'quantiteactuel', 'unite', 'actions'];
+  displayColumns: string[]=['id', 'Name','CName', 'prixbase','prixvente', 'seuil', 'quantiteactuel', 'unite', 'actions'];
   constructor(private service:ProductService, private route:Router) { }
 
   ngOnInit() {
